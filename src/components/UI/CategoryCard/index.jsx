@@ -17,7 +17,7 @@ export default function CategoryCard({ title, ads, isActive, ...props }) {
       </div>
       <div className={styles.content}>
         <div className={styles.content_info}>
-          <h4>Для женщин</h4>
+          <h4>{title}</h4>
           <p>4 147 объявлений</p>
         </div>
         <ChevronRightRoundedIcon className={styles.icon} />

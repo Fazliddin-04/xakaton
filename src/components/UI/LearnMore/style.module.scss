@@ -1,0 +1,18 @@
+.button {
+  display: flex;
+  width: 226px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  border: 2px solid rgba(214, 214, 214, 0.5);
+  background: #eaedf0;
+  margin: 40px auto 0px;
+  cursor: pointer;
+  user-select: none;
+  transition: 300ms;
+  &:active {
+    transform: scale(0.97);
+  }
+}

@@ -44,8 +44,13 @@
     }
   }
   .icon {
-    color: #B8BBBD;
+    color: #b8bbbd;
     transition: 300ms ease-in-out;
+  }
+  &:hover {
+    .content {
+      border-color: #388ff3;
+    }
   }
   &.active {
     .content {

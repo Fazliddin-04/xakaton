@@ -1,0 +1,42 @@
+.control {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  max-width: 580px;
+  width: 100%;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 8px;
+  border: 1px solid #eaedf0;
+  .icon {
+    color: #d5d8db;
+  }
+  input {
+    flex: 1;
+    border: 0;
+    height: 100%;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%; /* 20.8px */
+    &::placeholder {
+      color: #b8bbbd;
+    }
+  }
+  .button {
+    display: flex;
+    height: 44px;
+    padding: 11px 28px 12px 28px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    background: #16191d;
+    color: #fff;
+  }
+}
