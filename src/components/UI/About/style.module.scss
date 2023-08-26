@@ -1,0 +1,59 @@
+@import '@/styles/unit.scss';
+
+.about {
+  padding: 80px 0;
+  .title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 20px;
+  }
+  .text {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    line-height: 140%;
+    width: 71%;
+    margin-bottom: 32px;
+    color: #000000cc;
+  }
+  .box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .card {
+    background-color: #fff;
+    box-shadow: 0px 2px 34px rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
+    min-width: 350px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-family: 'Inter', sans-serif;
+    @media (max-width: 1200px) {
+      min-width: 320px;
+    }
+    &_info {
+      h4 {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 39px;
+      }
+      p {
+        font-size: 18px;
+        color: #1a2024;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    padding: 30px 0;
+    .text {
+      width: 100%;
+    }
+    .box {
+      margin: 30px auto;
+      justify-content: center;
+    }
+  }
+}

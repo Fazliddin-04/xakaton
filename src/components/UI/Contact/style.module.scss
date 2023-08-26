@@ -1,0 +1,48 @@
+@import "@/styles/media.scss";
+
+.contact {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 60px;
+  &_img {
+    display: none;
+    flex: 1;
+    min-height: 300px;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &_form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #eef0f2;
+    padding: 2rem;
+    .form_control {
+      background-color: #fff;
+      padding: 32px;
+      border-radius: 8px;
+    }
+  }
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: clamp(20px, 3vw, 32px);
+    line-height: 125%;
+    margin-bottom: 12px;
+  }
+  @include media($md) {
+    flex-direction: row;
+    min-height: 576px;
+    &_img {
+      display: block;
+    }
+    .title {
+      margin-bottom: 24px;
+    }
+  }
+}

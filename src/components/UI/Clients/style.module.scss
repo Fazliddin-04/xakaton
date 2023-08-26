@@ -1,0 +1,94 @@
+@import "@/styles/media.scss";
+
+.clients {
+  padding-top: 80px;
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    margin-bottom: 1rem;
+    @include media($md) {
+      font-size: 36px;
+    }
+  }
+  p {
+    max-width: 742px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 140%;
+    color: #3c464e;
+    @include media($md) {
+      font-size: 20px;
+    }
+  }
+  &_wrapper {
+    .marquee {
+      --scroll-start: -10%;
+      --scroll-end: -60%;
+      display: flex;
+      align-items: center;
+      min-width: fit-content;
+      gap: 30px;
+      width: 100%;
+      padding-top: 30px;
+      animation: move_animation 40s linear infinite;
+      &:nth-of-type(even) {
+        --scroll-start: -60%;
+        --scroll-end: -10%;
+      }
+      div {
+        position: relative;
+        z-index: 1;
+        height: 80px;
+        aspect-ratio: 1/0.47;
+        background: #ffffff;
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        flex-shrink: 0;
+        @include media($md) {
+          height: 120px;
+        }
+      }
+    }
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    &::before,
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 10px;
+      left: -100%;
+      background: linear-gradient(
+        90deg,
+        rgb(255, 255, 255) 85%,
+        transparent 100%
+      );
+      z-index: 1;
+    }
+    &::after {
+      right: -100%;
+      left: unset;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgb(255, 255, 255) 15%
+      );
+    }
+  }
+}
+
+@keyframes move_animation {
+  from {
+    transform: translateX(var(--scroll-start));
+  }
+  to {
+    transform: translateX(var(--scroll-end));
+  }
+}

@@ -1,0 +1,22 @@
+.card {
+  background-color: #fff;
+  width: 100%;
+  display: block;
+  padding: 24px;
+  border-radius: 8px;
+  .title {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 24px;
+    font-family: 'Inter', sans-serif;
+  }
+  @media (max-width: 800px) {
+    min-height: 160px;
+    height: 100%;
+    .title {
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  label {
+    margin-bottom: 6px;
+  }
+  .input {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 275px;
+    &_phone {
+      font: 400 1rem "Roboto", sans-serif;
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 275px;
+      height: 48px;
+      padding: 0px 16px;
+      border: none;
+      font-size: 14px;
+      line-height: 16px;
+      outline: none;
+      &::placeholder {
+        color: #84919a;
+        opacity: 1;
+      }
+    }
+    input {
+      height: 48px;
+      padding: 0px 16px;
+      border: none;
+      font-size: 14px;
+      line-height: 16px;
+      &::placeholder {
+        color: #84919a;
+        opacity: 1;
+      }
+    }
+    div[role='button'] {
+      height: 48px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      display: flex;
+      align-items: center;
+    }
+    & * {
+      border: none;
+    }
+  }
+}

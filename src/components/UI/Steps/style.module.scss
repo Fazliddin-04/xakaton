@@ -1,0 +1,22 @@
+@import '@/styles/media.scss';
+
+.container {
+  background-color: #fff;
+  padding: 16px 0px 80px;
+  .title {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .wrapper {
+    width: 100%;
+    min-height: 300px;
+    text-align: center;
+    position: relative;
+    @include media($md) {
+      min-height: 90vh;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}

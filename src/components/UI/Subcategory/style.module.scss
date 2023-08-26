@@ -1,0 +1,29 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  max-height: 0px;
+  height: 100%;
+  overflow: hidden;
+  &.active {
+    margin-top: 20px;
+    border-color: #eaedf0;
+    padding: 20px;
+    max-height: 260px;
+  }
+  .list_item {
+    cursor: pointer;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      color: #16191d;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 130%; /* 18.2px */
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import '@/styles/media.scss';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  position: relative;
+  gap: 30px;
+  @include media($md) {
+    padding: 100px 0;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  .features {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    width: 100%;
+    @include media($md) {
+      width: 60%;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 12px;
+      @include media($md) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 24px;
+      }
+    }
+    .title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 140%;
+      margin-bottom: 1rem;
+      @include media($md) {
+        font-size: 36px;
+        margin-bottom: 0px;
+      }
+    }
+    .description {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 180%;
+      width: 100%;
+      margin-bottom: 12px;
+      @include media($md) {
+        font-size: 20px;
+        line-height: 36px;
+        width: 80%;
+        margin-bottom: 24px;
+      }
+    }
+    .feature_item {
+      background-color: #ffffff;
+      flex-direction: row;
+      align-items: center;
+      padding: 24px;
+      border-radius: 12px;
+      flex: 1 1 30%;
+      img {
+        margin-right: 20px;
+        margin: auto 0;
+        width: 48px;
+      }
+      .feature_title {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 10px 0;
+        font-family: 'Inter-Bold', sans-serif;
+        font-weight: 500;
+      }
+      .feature_about {
+        font-size: 16px;
+        line-height: 26px;
+        font-family: 'Inter', sans-serif;
+      }
+    }
+  }
+  .img {
+    width: 100%;
+    text-align: center;
+    img {
+      max-width: 100%;
+      height: 300px;
+      object-fit: contain;
+    }
+    @include media($md) {
+      width: 46%;
+      img {
+        height: 80vh;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    padding: 30px 0;
+    .features {
+      margin: 0;
+      width: 100%;
+      .description {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}

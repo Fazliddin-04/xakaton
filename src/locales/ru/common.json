@@ -1,0 +1,19 @@
+{
+  "username cannot be blank": "Логин не может быть пустым",
+  "username length should be 6 to 30 characters": "Длина логина должна быть от 6 до 30 символов",
+  "password cannot be blank": "Пароль не может быть пустым",
+  "password length should be 8 to 30 characters": "Длина пароля должна быть от 8 до 30 символов",
+  "Invalid code": "Неверный код",
+  "username should contain only alphabetic characters, numbers and special characters(@, $, _, ., #)": "Логин должен содержать только буквы, цифры и специальные символы(@, $, _, ., #)",
+  "password should contain only alphabetic characters, numbers and special characters(@, $, _, ., #)": "Пароль должен содержать только буквы, цифры и специальные символы(@, $, _, ., #)",
+  "password should contain at least one number": "Пароль должен содержать хотя бы одну цифру",
+  "Shipper is already exists": "Клиент уже существует",
+  "Username already exists": "Имя пользователя уже занято",
+  "nothing": "Ничего",
+  "after": "постоплата",
+  "before": "предоплата",
+  "ru": "Русский",
+  "uz": "O'zbekcha",
+  "en": "English",
+  "sign_in": "Войти"
+}

@@ -1,0 +1,127 @@
+@import "@/styles/media.scss";
+
+.footer {
+  background: center / cover no-repeat
+    url("../../../../public/images/footer_bg.png");
+  padding: 30px 0px 0px;
+  margin-top: 40px;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+  position: relative;
+  @include media($md) {
+    margin-top: 80px;
+  }
+  &_nav {
+    font-family: "Inter", sans-serif;
+    gap: 2rem;
+    @include media($md) {
+      flex-direction: row;
+      align-items: center;
+      gap: 0;
+    }
+  }
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(
+      0px 8.82758617401123px 35.31034469604492px rgba(56, 143, 243, 0.44)
+    );
+  }
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 8px 72px;
+    color: #272727;
+    .list_item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #16191d;
+    }
+  }
+  .about_text {
+    margin: 24px auto;
+    font-size: 14px;
+    max-width: 669px;
+  }
+  .bottom {
+    height: 48px;
+    background-color: #fff;
+    border-top: 1px solid #eaedf0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #000;
+    font-size: 12px;
+    margin-top: 24px;
+    p:first-child a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    p:last-child a {
+      transition: 0.4s ease-in-out all;
+      &:hover {
+        color: #0e73f6;
+      }
+    }
+    @include media($md) {
+      margin-top: 48px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .container {
+    margin-top: 30px;
+    .footer_menu {
+      .footer_text {
+        display: block !important;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .footer_nav {
+    .list {
+      .list_item {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    .socials {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: white;
+      font-size: 14px;
+      line-height: 24px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    .footer_menu {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .socials {
+      display: block;
+      text-align: center;
+    }
+  }
+}

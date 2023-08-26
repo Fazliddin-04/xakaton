@@ -1,0 +1,46 @@
+@import '@/styles/unit';
+@import '@/styles/media';
+
+.slide {
+  padding: 8px;
+}
+
+.slideNextBtn,
+.slidePrevBtn {
+  font-size: 18px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: rgba(67, 162, 80, 0.12);
+  position: absolute;
+  z-index: 10;
+  bottom: 0%;
+  cursor: pointer;
+  display: flex;
+  color: #43A250;
+  align-items: center;
+  justify-content: center;
+  transition: 150ms ease;
+  &:hover {
+    opacity: 0.9;
+  }
+  @include media($lg) {
+    display: flex;
+  }
+}
+
+.slideNextBtn {
+  right: 0;
+  transform: translate(0%, 100%);
+  &:active {
+    transform: translate(0%, 100%) scale(0.95);
+  }
+}
+
+.slidePrevBtn {
+  left: 0;
+  transform: translate(0%, 100%);
+  &:active {
+    transform: translate(0%, 100%) scale(0.95);
+  }
+}
